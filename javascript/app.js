@@ -1,21 +1,36 @@
-//topic firestore
-//creating collection
+// add collection
+// add document
+// add field in document
+// get all document
+// get specific document
+// where method
+// orderby method
+// limit method
+// compound queries where, orderby,limit
+// update document
+// deleting document
+// deleting field
+// deleting collection is not recommended
+// Google Authentication
+
+
+//add collection 
+// function createCollection() {
+//     database.collection("Student").doc("20181562-M").set({
+//         FirstName: "Joash",
+//         LastName: "Cabanilla",
+//         Course: "BSCS"
+//     });
+// }
 
 //add document
-//adding field in document
-
-//get all document
-//get specific document
-//where method
-//orderby method
-//limit method
-//compound queries where, orderby,limit
-
-//update document
-
-//deleting document
-//deleting field
-//deleting collection is not recommended
+// function createCollection() {
+//     database.collection("Student").doc("20181562-M").set({
+//         FirstName: "Joash",
+//         LastName: "Cabanilla",
+//         Course: "BSCS"
+//     });
+// }
 
 // function addCollection() {
 //     database.collection("Student").doc("20181562-M").set({
@@ -42,32 +57,32 @@
 //     Course: "BSIT"
 // });
 
-const login = document.querySelector(".btnLogin");
-const logout = document.querySelector(".btnLogout");
-const conLogin = document.querySelector(".Login");
-const conLogout = document.querySelector(".Logout");
-const info = document.querySelector(".info");
+// const login = document.querySelector(".btnLogin");
+// const logout = document.querySelector(".btnLogout");
+// const conLogin = document.querySelector(".Login");
+// const conLogout = document.querySelector(".Logout");
+// const info = document.querySelector(".info");
 
-const provider = new firebase.auth.GoogleAuthProvider();
+// const provider = new firebase.auth.GoogleAuthProvider();
 
-login.addEventListener("click", () => {
-    firebase.auth().signInWithPopup(provider).then(res => {
-        info.innerHTML = `
-        <p>Name: ${res.user.displayName}</p><br>
-        <p>Email: ${res.user.email}</p>`;
-        conLogout.style.display = "block";
-        conLogin.style.display = "none";
-    }).catch(error => {
-        console.log(error);
-    });
-});
+// login.addEventListener("click", () => {
+//     firebase.auth().signInWithPopup(provider).then(res => {
+//         info.innerHTML = `
+//         <p>Name: ${res.user.displayName}</p><br>
+//         <p>Email: ${res.user.email}</p>`;
+//         conLogout.style.display = "block";
+//         conLogin.style.display = "none";
+//     }).catch(error => {
+//         console.log(error);
+//     });
+// });
 
-logout.addEventListener("click", () => {
-    firebase.auth().signOut().then(() => {
-        conLogout.style.display = "none";
-        conLogin.style.display = "block";
-    }).catch(err => {
-        console.log(err);
-    });
+// logout.addEventListener("click", () => {
+//     firebase.auth().signOut().then(() => {
+//         conLogout.style.display = "none";
+//         conLogin.style.display = "block";
+//     }).catch(err => {
+//         console.log(err);
+//     });
 
-});
+// });
